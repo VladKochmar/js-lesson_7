@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ukr">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Завдання 0</title>
+</head>
+
+<body>
+   <main class="page">
+      <section class="block">
+         <div class="block__container">
+            <h1 class="block__title">Обов'язкове завдання 0</h1>
+            <div class="block__body">
+               <a href="../index.html" class="block__link">Повернутися до index.html</a>
+            </div>
+         </div>
+      </section>
+   </main>
+   <script>
+      function getSeason(monthNumber) {
+         switch (monthNumber) {
+            case 12:
+            case 1:
+            case 2:
+               return 'Зима'
+               break
+            case 3:
+            case 4:
+            case 5:
+               return 'Весна'
+               break
+            case 6:
+            case 7:
+            case 8:
+               return 'Літо'
+               break
+            case 9:
+            case 10:
+            case 11:
+               return 'Осінь'
+               break
+            default:
+               return 'Некоректне число'
+               break
+         }
+      }
+
+      const monthNumber = parseInt(prompt('Введіть номер місяця'))
+
+      const result = getSeason(monthNumber)
+
+      document.write(`<div class="text">${result}</div>`)
+   </script>
+</body>
+
+</html>

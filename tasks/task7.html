@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ukr">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Завдання 7</title>
+</head>
+
+<body>
+   <main class="page">
+      <section class="block">
+         <div class="block__container">
+            <h1 class="block__title">Обов'язкове завдання 7</h1>
+            <div class="block__body">
+               <a href="../index.html" class="block__link">Повернутися до index.html</a>
+            </div>
+         </div>
+      </section>
+   </main>
+   <script>
+      function getImage(img1, img2, img3, img4) {
+         const randomImageNum = Math.floor(Math.random() * 4)
+         return arguments[randomImageNum]
+      }
+
+      function showImage(imagePath) {
+         document.write(`<img src="${imagePath}" alt="Image" class="image">`)
+      }
+
+      const imgPath1 = '../img/image01.png'
+      const imgPath2 = '../img/image02.png'
+      const imgPath3 = '../img/image03.png'
+      const imgPath4 = '../img/image04.png'
+
+      let resultPath = getImage(imgPath1, imgPath2, imgPath3, imgPath4)
+      showImage(resultPath)
+
+      resultPath = getImage(imgPath1, imgPath2, imgPath3, imgPath4)
+      showImage(resultPath)
+
+      resultPath = getImage(imgPath1, imgPath2, imgPath3, imgPath4)
+      showImage(resultPath)
+
+      resultPath = getImage(imgPath1, imgPath2, imgPath3, imgPath4)
+      showImage(resultPath)
+   </script>
+</body>
+
+</html>

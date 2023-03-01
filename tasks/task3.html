@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ukr">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Завдання 3</title>
+</head>
+
+<body>
+   <main class="page">
+      <section class="block">
+         <div class="block__container">
+            <h1 class="block__title">Обов'язкове завдання 3</h1>
+            <div class="block__body">
+               <a href="../index.html" class="block__link">Повернутися до index.html</a>
+            </div>
+         </div>
+      </section>
+   </main>
+   <script>
+      function getSum(num1 = 0, num2 = 0, num3 = 0, num4 = 0) {
+         return num1 + num2 + num3 + num4
+      }
+
+      function getMultiplication(num1 = 1, num2 = 1, num3 = 1, num4 = 1) {
+         return num1 * num2 * num3 * num4
+      }
+
+      function getAverage(num1 = 0, num2 = 0, num3 = 0, num4 = 0) {
+         return getSum(num1, num2, num3, num4) / 4
+      }
+
+      // num1 = 3 num2 = 5 num3 = 11 num4 = 2
+      function getMinNumber(num1 = 0, num2 = 0, num3 = 0, num4 = 0) {
+         if (num1 < num2 && num1 < num3 && num1 < num4)
+            return num1
+         else if (num2 < num3 && num2 < num4)
+            return num2
+         else if (num3 < num4)
+            return num3
+         else
+            return num4
+      }
+
+      const numberOne = parseInt(prompt('Введіть число №1'))
+      const numberTwo = parseInt(prompt('Введіть число №2'))
+      const numberThree = parseInt(prompt('Введіть число №3'))
+      const numberFour = parseInt(prompt('Введіть число №4'))
+
+      const sumResult = getSum(numberOne, numberTwo, numberThree, numberFour)
+      const multResult = getMultiplication(numberOne, numberTwo, numberThree, numberFour)
+      const averageResult = getAverage(numberOne, numberTwo, numberThree, numberFour)
+      const minResult = getMinNumber(numberOne, numberTwo, numberThree, numberFour)
+      document.write(`
+         <div class="text">Результат суми: ${sumResult}</div>
+         <div class="text">Результат добутку: ${multResult}</div>
+         <div class="text">Середнє арифметичне: ${averageResult}</div>
+         <div class="text">Мінімальне значення: ${minResult}</div>
+      `)
+
+   </script>
+</body>
+
+</html>

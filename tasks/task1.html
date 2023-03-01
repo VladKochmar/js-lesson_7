@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ukr">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Завдання 1</title>
+</head>
+
+<body>
+   <main class="page">
+      <section class="block">
+         <div class="block__container">
+            <h1 class="block__title">Обов'язкове завдання 1</h1>
+            <div class="block__body">
+               <a href="../index.html" class="block__link">Повернутися до index.html</a>
+            </div>
+         </div>
+      </section>
+   </main>
+   <script>
+      function getMonthName(monthNumber) {
+         switch (monthNumber) {
+            case 1:
+               return 'Січень'
+               break
+            case 2:
+               return 'Лютий'
+               break
+            case 3:
+               return 'Березень'
+               break
+            case 4:
+               return 'Квітень'
+               break
+            case 5:
+               return 'Травень'
+               break
+            case 6:
+               return 'Червень'
+               break
+            case 7:
+               return 'Липень'
+               break
+            case 8:
+               return 'Серпень'
+               break
+            case 9:
+               return 'Вересень'
+               break
+            case 10:
+               return 'Жовтень'
+               break
+            case 11:
+               return 'Листопад'
+               break
+            case 12:
+               return 'Грудень'
+               break
+            default:
+               return 'Некоректне число'
+               break
+         }
+      }
+
+      const monthNumber = parseInt(prompt('Введіть номер місяця'))
+
+      const result = getMonthName(monthNumber)
+
+      document.write(`<div class="text">${result}</div>`)
+   </script>
+</body>
+
+</html>

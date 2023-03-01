@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ukr">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Завдання 12</title>
+</head>
+
+<body>
+   <main class="page">
+      <section class="block">
+         <div class="block__container">
+            <h1 class="block__title">Обов'язкове завдання 12</h1>
+            <div class="block__body">
+               <a href="../index.html" class="block__link">Повернутися до index.html</a>
+            </div>
+            <div class="block__text">
+               <p>Нагорода за 3 полуниці: 100грн</p>
+               <p>Нагорода за 3 апельсини: 200грн</p>
+               <p>Нагорода за 3 лимони: 500грн</p>
+               <p>Нагорода за 3 кавуна: 1000грн</p>
+            </div>
+         </div>
+      </section>
+   </main>
+   <script>
+      document.write('<div class="game">')
+      for (let i = 0; i < 3; i++) {
+         const randomNumber = Math.floor(Math.random() * 4 + 1)
+
+         switch (randomNumber) {
+            case 1:
+               document.write('<img src="../img/image01.png" alt="Image" class="game__image">')
+               break
+            case 2:
+               document.write('<img src="../img/image02.png" alt="Image" class="game__image">')
+               break
+            case 3:
+               document.write('<img src="../img/image03.png" alt="Image" class="game__image">')
+               break
+            case 4:
+               document.write('<img src="../img/image04.png" alt="Image" class="game__image">')
+               break
+         }
+      }
+      document.write('</div>')
+   </script>
+</body>
+
+</html>

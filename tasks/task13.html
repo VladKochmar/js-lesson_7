@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ukr">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Завдання 13</title>
+</head>
+
+<body>
+   <main class="page">
+      <section class="block">
+         <div class="block__container">
+            <h1 class="block__title">Обов'язкове завдання 13</h1>
+            <div class="block__body">
+               <a href="../index.html" class="block__link">Повернутися до index.html</a>
+            </div>
+         </div>
+      </section>
+   </main>
+   <script>
+      const fieldWidth = parseInt(prompt('Введіть ширину поля'))
+      const fieldHeight = parseInt(prompt('Введіть висоту поля'))
+      const shellsNumber = parseInt(prompt('Введіть кількість снарядів'))
+
+      const shipCoordinatesX = Math.floor(Math.random() * fieldWidth + 1)
+      const shipCoordinatesY = Math.floor(Math.random() * fieldHeight + 1)
+
+      console.log(shipCoordinatesX, shipCoordinatesY);
+
+      let status = `Ви програли. Координати корабля X: ${shipCoordinatesX} Y: ${shipCoordinatesY}`
+
+      for (let i = 0; i < shellsNumber; i++) {
+         const shotCoordinatesX = parseInt(prompt('Введіть координати пострілу по X'))
+         const shotCoordinatesY = parseInt(prompt('Введіть координати пострілу по Y'))
+
+         if (shotCoordinatesX === shipCoordinatesX && shotCoordinatesY === shipCoordinatesY) {
+            status = `Вітаю, корабель на дні! Координати корабля X: ${shipCoordinatesX} Y: ${shipCoordinatesY}`
+            break
+         } else
+            alert(`Промах. Координати пострілу X: ${shotCoordinatesX} Y: ${shotCoordinatesY}`)
+      }
+
+      alert(status)
+   </script>
+</body>
+
+</html>

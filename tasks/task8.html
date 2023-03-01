@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ukr">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Завдання 8</title>
+</head>
+
+<body>
+   <main class="page">
+      <section class="block">
+         <div class="block__container">
+            <h1 class="block__title">Обов'язкове завдання 8</h1>
+            <div class="block__body">
+               <a href="../index.html" class="block__link">Повернутися до index.html</a>
+            </div>
+         </div>
+      </section>
+   </main>
+   <script>
+      function createBanner(imgPath, title, link) {
+         document.write(`
+            <div class="banner">
+               <div class="banner__container">
+                  <h2 class="banner__title">${title}</h2>
+                  <a href="${link}" class="banner__image" target="_blank"><img src="${imgPath}" alt="Image"></a>
+               </div>
+            </div>
+         `)
+      }
+
+      const imgPath = '../img/image01.png'
+      const bannerTitle = 'Google'
+      const bannerLink = 'https://www.google.com/'
+
+      createBanner(imgPath, bannerTitle, bannerLink)
+   </script>
+</body>
+
+</html>

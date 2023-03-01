@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ukr">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Завдання 4</title>
+</head>
+
+<body>
+   <main class="page">
+      <section class="block">
+         <div class="block__container">
+            <h1 class="block__title">Обов'язкове завдання 4</h1>
+            <div class="block__body">
+               <a href="../index.html" class="block__link">Повернутися до index.html</a>
+            </div>
+         </div>
+      </section>
+   </main>
+   <script>
+      function getNumbersInfo(num1, num2, num3) {
+         let evenNumCounter = 0, positiveNumCounter = 0, bigNumCounter = 0
+
+         for (let i = 0; i < arguments.length; i++) {
+            if (arguments[i] % 2 == 0) evenNumCounter++
+            if (arguments[i] > 0) positiveNumCounter++
+            if (arguments[i] > 100) bigNumCounter++
+         }
+
+         return `Кількість парних: ${evenNumCounter} Кількість додатних: ${positiveNumCounter} Кількість більших за 100: ${bigNumCounter}`
+      }
+
+      const num1 = parseInt(prompt('Введіть число №1'))
+      const num2 = parseInt(prompt('Введіть число №2'))
+      const num3 = parseInt(prompt('Введіть число №3'))
+
+      const result = getNumbersInfo(num1, num2, num3)
+
+      alert(result)
+   </script>
+</body>
+
+</html>

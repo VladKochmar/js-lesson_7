@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ukr">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Завдання 14</title>
+</head>
+
+<body>
+   <main class="page">
+      <section class="block">
+         <div class="block__container">
+            <h1 class="block__title">Обов'язкове завдання 14</h1>
+            <div class="block__body">
+               <a href="../index.html" class="block__link">Повернутися до index.html</a>
+            </div>
+         </div>
+      </section>
+   </main>
+   <script>
+      const paymentAmount = Math.floor(Math.random() * 100 + 1)
+
+      let ueserPayment, result, remainder = paymentAmount
+
+      do {
+         ueserPayment = parseFloat(prompt(`Ви повинні сплатити ${remainder}грн. Введіть суму`))
+         remainder -= ueserPayment
+      } while (remainder > 0)
+
+      if (remainder == 0)
+         result = `Ви сплатили всю суму: ${paymentAmount}грн.`
+      else
+         result = `Ви сплатили всю суму: ${paymentAmount}грн. Ваша решта: ${Math.abs(remainder)}грн`
+
+      alert(result)
+   </script>
+</body>
+
+</html>

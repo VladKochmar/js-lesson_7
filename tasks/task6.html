@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ukr">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Завдання 6</title>
+</head>
+
+<body>
+   <main class="page">
+      <section class="block">
+         <div class="block__container">
+            <h1 class="block__title">Обов'язкове завдання 6</h1>
+            <div class="block__body">
+               <a href="../index.html" class="block__link">Повернутися до index.html</a>
+            </div>
+         </div>
+      </section>
+   </main>
+   <script>
+      function createTable(colsNum, rowsNum) {
+         document.write(`
+            <table class="table">
+               <tbody class="table__body">
+         `)
+         for (let row = 0; row < rowsNum; row++) {
+            document.write(`<tr class="table__row">`)
+            for (let column = 0; column < colsNum; column++) {
+               document.write(`<td class="table__column"></td>`)
+            }
+            document.write(`</tr>`)
+         }
+         document.write(`
+               </tbody>
+            </table>
+         `)
+      }
+
+      const numberOfColumns = parseInt(prompt('Введіть кількість стовпців'))
+      const numberOfRows = parseInt(prompt('Введіть кількість рядків'))
+
+      createTable(numberOfColumns, numberOfRows)
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ukr">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Завдання 9</title>
+</head>
+
+<body>
+   <main class="page">
+      <section class="block">
+         <div class="block__container">
+            <h1 class="block__title">Обов'язкове завдання 9</h1>
+            <div class="block__body">
+               <a href="../index.html" class="block__link">Повернутися до index.html</a>
+            </div>
+         </div>
+      </section>
+   </main>
+   <script>
+      function getNegativeTemperature(...temperature) {
+         let negTemperatureCounter = 0
+
+         for (let i = 0; i < arguments.length; i++) {
+            if (arguments[i] < 0) negTemperatureCounter++
+         }
+
+         return negTemperatureCounter
+      }
+
+      const result = getNegativeTemperature(-9, 2, 3, 5, 0, -13, 15, -2, 30, -4)
+
+      alert(`Кількість від’ємних показів температури: ${result}`)
+   </script>
+</body>
+
+</html>
